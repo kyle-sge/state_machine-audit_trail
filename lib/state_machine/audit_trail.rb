@@ -11,6 +11,6 @@ end
 
 require 'state_machine/audit_trail/transition_auditing'
 require 'state_machine/audit_trail/backend'
-require 'state_machine/audit_trail/railtie' if defined?(::Rails)
+require 'state_machine/audit_trail/railtie' if defined?(Rails) && defined?(Rails::Engine)
 
 StateMachine::AuditTrail.setup
